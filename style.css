@@ -1,3 +1,48 @@
+/*********************
+*** EASY CHALLENGE ***
+*********************/
+select {
+	/* Remove default styling */
+	-webkit-appearance: none;
+    -moz-appearance:    none;
+	appearance:         none;
+	font-size: 16px;
+	color: white;
+	background-color: slategray;
+	-webkit-transition: background-color .2s ease-in-out;
+	-moz-transition: 	background-color .2s ease-in-out;
+	transition: 		background-color .2s ease-in-out;
+	border-radius: .625em;
+	padding: .5em;
+	outline: none;
+}
+
+option.yoda {
+    background-color: green;
+    font-size: 2em;
+}
+
+option.vader {
+    background-color: red;
+    font-size: 1.8em;
+}
+
+option.skywalker {
+    background-color: blue;
+    font-size: 1.6em;
+}
+
+option.kenobi {
+    background-color: blue;
+    font-size: 1.4em;
+}
+
+option.solo {
+    background-color: white;
+    font-size: 1.2em;
+    color: black;
+}
+
 
 /***********************
 *** MEDIUM CHALLENGE ***
@@ -7,16 +52,16 @@
 .medium.challenge input[type='checkbox'] {
 	/* remove default non-styleable checkbox: */
 	-webkit-appearance: none;
-	-moz-appearance: 		none;
-	appearance: 				none;
+	-moz-appearance: 	none;
+	appearance: 		none;
 	/* control overall checkbox size with font-size: */
 	font-size: 16px;
 	width: 5em;
 	height: 2em;
 	background-color: red;
 	-webkit-transition: background-color .2s ease-in-out;
-	-moz-transition: 		background-color .2s ease-in-out;
-	transition: 				background-color .2s ease-in-out;
+	-moz-transition: 	background-color .2s ease-in-out;
+	transition: 		background-color .2s ease-in-out;
 	border-radius: 1em;
 	position: relative;
 	cursor: pointer;
@@ -25,9 +70,9 @@
 	vertical-align: middle;
 	/* shadows: h-offset v-offset blur spread color */
 	-webkit-box-shadow: inset 0 0 .6em .1em rgba(0,0,0,.7);
-	-moz-shadow:				inset 0 0 .6em .1em rgba(0,0,0,.7);
-	box-shadow: 				inset 0 0 .6em .1em rgba(0,0,0,.7);
-  }
+	-moz-shadow:		inset 0 0 .6em .1em rgba(0,0,0,.7);
+	box-shadow: 		inset 0 0 .6em .1em rgba(0,0,0,.7);
+}
 
 /* Style input in checked state */
 .medium.challenge input[type='checkbox']:checked {
@@ -43,52 +88,58 @@
 	height: 2em;
 	/* scales down the check and keeps it centered: */
 	-webkit-transform: scale(.75);
-	-moz-transform: 	 scale(.75);
-	transform: 				 scale(.75);
+	-moz-transform:    scale(.75);
+	transform: 		   scale(.75);
 	/* shadows: h-offset v-offset blur spread color */
 	-webkit-box-shadow: inset 0 0 .4em .05em rgba(0,0,0,.4);
-	-moz-shadow:				inset 0 0 .4em .05em rgba(0,0,0,.4);
-	box-shadow: 				inset 0 0 .4em .05em rgba(0,0,0,.4);
+	-moz-box-shadow:	inset 0 0 .4em .05em rgba(0,0,0,.4);
+	box-shadow: 		inset 0 0 .4em .05em rgba(0,0,0,.4);
 	border-radius: 50%;
 	background-color: rgb(255, 255, 255);
 	left: 0;
 	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: 		all .2s ease-in-out;
-	transition: 				all .2s ease-in-out;
-  }
+	-moz-transition: 	all .2s ease-in-out;
+	transition: 		all .2s ease-in-out;
+}
 	
 /* style the 'check' in checked position */
 .medium.challenge input[type='checkbox']:checked:after{
 	/* moves the 'check' to right */
 	left: 3em;
-  }
-
-
-
-
+}
 
 
 /********************************
-*** CHALLENGE ORIGINAL STYLES ***
-********************************/
+*** CHALLENGE GENERAL STYLES ****
+*********************************/
 
+body {
+	background-image: radial-gradient(circle, #d6d6d6, #c6c7ca, #b5babe, #a2adb1, #90a0a1);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+  margin: 0;
+  padding: 0;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+}
 .challenges{
-    width: 350px;
-    margin: 50px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #505050;
-    border: 3px solid #505050;
-    border-radius: 20px;
-    padding: 25px;
+	width: 350px;
+	/* margin: 50px auto; */
+	font-family: Arial, Helvetica, sans-serif;
+	color: #505050;
+	border: 3px solid #505050;
+	border-radius: 20px;
+	padding: 25px;
+	background-color: white;
 }
-
 .challenge{
-    border: 1px solid #505050;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
+	border: 1px solid #505050;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
 }
-
 h1{
     margin: 0px;
 }

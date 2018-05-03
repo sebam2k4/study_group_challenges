@@ -3,9 +3,9 @@
 *********************/
 select {
 	/* Remove default styling */
-	-webkit-appearance: none;
+	/* -webkit-appearance: none;
     -moz-appearance:    none;
-	appearance:         none;
+	appearance:         none; */
 	font-size: 16px;
 	color: white;
 	background-color: slategray;
@@ -39,7 +39,7 @@ option.kenobi {
 
 option.solo {
     background-color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
 }
 
@@ -48,7 +48,7 @@ option.solo {
 *** MEDIUM CHALLENGE ***
 ***********************/
 
-/* Style input in unchecked state */
+/* Style input in 'OFF' state */
 .medium.challenge input[type='checkbox'] {
 	/* remove default non-styleable checkbox: */
 	-webkit-appearance: none;
@@ -74,14 +74,14 @@ option.solo {
 	box-shadow: 		inset 0 0 .6em .1em rgba(0,0,0,.7);
 }
 
-/* Style input in checked state */
+/* Style input in 'ON' state */
 .medium.challenge input[type='checkbox']:checked {
 	/* change input background color when checked */
 	background-color: rgb(26, 177, 26);
 }
 
-/* Style the 'check' in unchecked position */
-.medium.challenge input[type='checkbox']:after{
+/* Style the 'check' in 'OFF' position */
+.medium.challenge input[type='checkbox']:after {
 	position: absolute;
 	content: "";
 	width: 2em;
@@ -102,11 +102,97 @@ option.solo {
 	transition: 		all .2s ease-in-out;
 }
 	
-/* style the 'check' in checked position */
-.medium.challenge input[type='checkbox']:checked:after{
+/* style the 'check' in 'ON' position */
+.medium.challenge input[type='checkbox']:checked:after {
 	/* moves the 'check' to right */
 	left: 3em;
 }
+
+
+/*********************
+*** HARD CHALLENGE ***
+*********************/
+
+.checkboxholder {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.checkboxholder input[type='checkbox'] {
+    /* remove default non-styleable checkbox: */
+	-webkit-appearance: none;
+	-moz-appearance: 	none;
+    appearance: 		none;
+    width: 4em;
+    height: 1em;
+    background-color: #666;
+    position: relative;
+	cursor: pointer;
+    outline: none;
+    z-index: 100;
+    border-radius: .25em;
+}
+
+/* Style input in 'ON' state */
+.checkboxholder {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style the 'check' in 'OFF' position */
+.checkboxholder input[type='checkbox']:after {
+    position: absolute;
+    left: 4em;
+    content: '';
+    width: 0;
+    height: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+	/* scales down the check and keeps it centered: */
+	-webkit-transform: scale(1, .4);
+	-moz-transform:    scale(1, .4);
+    transform: 		   scale(1, .4);
+    transition: all 0.3s ease-in;
+}
+
+/* style the 'check' in 'ON' position */
+.checkboxholder input[type='checkbox']:checked:after {
+    width: 18em;
+}
+
+
+/* style each lightsaber */
+
+#checkboxHolder-0 input[type='checkbox']:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 .25em red, 0 0 .5em red;
+    background-color: rgb(236, 163, 163);
+}
+
+#checkboxHolder-0 input[type='checkbox']:checked:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 1em red, 0 0 3em red;
+    background-color: rgb(255, 121, 121);
+}
+
+#checkboxHolder-1 input[type='checkbox']:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 .25em green, 0 0 .5em green;
+    background-color: green;
+}
+
+#checkboxHolder-1 input[type='checkbox']:checked:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 1em green, 0 0 3em green;
+    background-color: green;
+}
+
+#checkboxHolder-2 input[type='checkbox']:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 .25em blue, 0 0 .5em blue;
+    background-color: blue;
+}
+
+#checkboxHolder-2 input[type='checkbox']:checked:after {
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 1em blue, 0 0 3em blue;
+    background-color: blue;
+}
+
 
 
 /********************************
@@ -118,14 +204,14 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100vh;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 	display: flex;
-  justify-content: center;
+    justify-content: center;
 	align-items: center;
 }
 .challenges{
-	width: 350px;
+	width: 450px;
 	/* margin: 50px auto; */
 	font-family: Arial, Helvetica, sans-serif;
 	color: #505050;

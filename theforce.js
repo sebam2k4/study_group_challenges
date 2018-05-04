@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
   *********************/
 
   // get html collection of option elements
-  let options = document.getElementById('jedi-list').options;
+  const options = document.getElementById('jedi-list').options;
 
   //define class names
   const classes = ["yoda", "vader", "skywalker", "kenobi", "solo"]
@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function(){
   *** HARD CHALLENGE ***
   *********************/
 
-  // create ids for elements with 'checkboxHolder' class
+  // create ids for elements with 'checkboxHolder' class (checkbox containers)
   // this will make it possible to style each checkbox individually in css
-  let checkboxHolders = document.querySelectorAll(".checkboxholder");
+  const checkboxHolders = document.querySelectorAll(".checkboxholder");
   for (let i = 0; i < checkboxHolders.length; i++) {
     checkboxHolders[i].id = `checkboxHolder-${i}`;
   }
